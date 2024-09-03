@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+$colorprimario:#F2E2C4;
+$colorsecundario:#F2A679;
+$colorterciario:#A60A27;
+$fuentetitulos: "matemasie", sans-serif;
+$fuentetextos:"Martian Mono", monospace;
+$ancho:720px;
+
+div{
+    width: calc($ancho)-50;
+}
+h1{
+font-family: $fuentetitulos;
+}
+header{
+background-color: $colorprimario;
+color: white;
+ nav{
+    color: red;
+    background-color: white;
+        ul{
+        display: flex;
+        flex-direction: row;
+            li{
+                margin: 0 20px;
+                }
+            a{
+                    color: white;
+                    text-decoration: none;
+                    &:hover{
+                        color: black;
+                    }
+            }
+        }
+     }
+}

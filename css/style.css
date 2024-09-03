@@ -1,287 +1,37 @@
-/* INDEX */
-
-header{
-background-color: rgb(21, 21, 124);
-color: rgb(255, 255, 255);
-display: flex;
-flex-direction: row;
-justify-content: space-between;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-ul{
-list-style: none;
-display: flex;
-flex-direction: row;
+div {
+  width: 670px;
 }
 
-li{
-    margin: 0 20px ;
+h1 {
+  font-family: "matemasie", sans-serif;
 }
 
-h1{
-    margin-left: 15px;
+header {
+  background-color: #F2E2C4;
+  color: white;
+}
+header nav {
+  color: red;
+  background-color: white;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+}
+header nav ul li {
+  margin: 0 20px;
+}
+header nav ul a {
+  color: white;
+  text-decoration: none;
+}
+header nav ul a:hover {
+  color: black;
 }
 
-nav{
-    display: flex;
-    align-items: center;
-    background-color: rgb(21, 21, 124);;
-}
-
-nav a {
-    color: white; /* Cambia el color del texto a negro */
-    text-decoration: none; /* Remueve el subrayado */
-}
-
-.banner{
-display: flex;
-flex-direction: row;
-justify-content: space-around;
-align-items: stretch;
-}
-
-.banner img {
-    width: 700px;  /* Asegúrate de que ambas imágenes tengan el mismo ancho */
-    height: 700px; /* Asegúrate de que ambas imágenes tengan la misma altura */
-    object-fit: cover; /* Asegura que la imagen llene el cuadrado y se recorte si es necesario */
-    margin: 20px; /* Ajusta el espacio entre las imágenes si es necesario */
-    border-radius: 20px;
-}
-
-/* footer{
-display: flex;  
-justify-content: space-around;
-margin-top: 20px;
-position: fixed;
-} */
-
-.footer-global{
-
-    position: absolute; 
-    bottom: 0;
-    background-color: #f8f8f8;
-    padding: 10px 0;
-    left: 0;
-    font-size: 16px; /* Tamaño de letra */
-    font-family: Arial, sans-serif; /* Familia de fuentes */
-    font-weight: bold; /* Peso de la fuente */
-    color: #333; /* Color del texto */
-    text-align: center; /* Alineación del texto */
-    clear: both;
-    min-height: 0vh;
-}
-
-/* NUESTRA HISTORIA */
-
-.footer-especifico {
- 
-    position: relative;
-    background-color: #f8f8f8;
-    padding: 10px 0;
-    margin: 0; /* Asegura que no haya margen */
-    left: 0;
-    font-size: 16px;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    color: #333;
-    text-align: left;
-    clear: both;
-    min-height: 10vh;
-    width: 100%;
-    box-sizing: border-box;
-    display: block; /* O asegúrate de que el display no esté alterando la alineación */
-    text-align: left;
-}
-
-main{
-
-    display: flex;
-    justify-content: center;
-
-}
-
-.main-historia{
-
-    display: flex;
-    justify-content: center; /* Centra el párrafo horizontalmente */
-    align-items: center; /* Centra el párrafo verticalmente */
-    min-height: 100vh; /* Hace que el main ocupe toda la altura de la página */
-
-}
-
-.p-centrado{
-
-    display: flex;
-    max-width: 500px; /* Ajusta el ancho máximo del párrafo */
-    width: 100%; /* Asegura que el párrafo ocupe todo el ancho disponible dentro del max-width */
-    text-align: justify; /* Centra el texto dentro del párrafo */
-    border: 2px solid #78787ab7; /* Agrega un borde alrededor del párrafo */
-    border-radius: 8px; /* Opcional: añade bordes redondeados */
-    background-color: #f0f0f0; /* Opcional: añade un color de fondo */
-    margin:  -200px 0 0 0; /* Margen superior negativo para moverlo hacia arriba */
-    padding: 3%;
-    font-family: Arial, Helvetica, sans-serif;
-    /* font-weight: bold; */
-}
-
-
-p{
-
-display: flex;
-justify-content: center;
-
-}
-
-/* CONTACTOS */
-
-.contactos-main {
-    display: flex;
-    flex-direction: column; /* Alinea los elementos en una columna */
-    align-items: center; /* Centra los elementos horizontalmente */
-    gap: 20px; /* Espacio entre el mapa y la lista de empleados */
-    padding: 20px; /* Añade un padding alrededor del contenido */
-}
-
-.jefes{
-
-    font-family: 'Roboto', sans-serif; /* Elige una fuente que te guste */
-    font-size: 18px; /* Ajusta el tamaño de la fuente */
-    line-height: 1.6; /* Controla el espacio entre líneas */
-    color: #333; /* Elige el color del texto */
-    font-weight: bold;
-    
-    
-}
-
-/* TRABAJE CON NOSOTROS */
-
-.main-Trabaje{
-
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    min-height: 70vh; /* Hace que el main ocupe toda la altura de la ventana */
-    padding: 20px; /* Añade espacio interno si es necesario */
-
-}
-
-/* PRODUCTOS */
-
-
-.main-productos{
-
-    padding: 20px; 
-
-
-}
-
-
-.productos-section {
-    display: flex;
-    flex-wrap: wrap; /* Permite que las imágenes se ajusten en filas */
-    gap: 20px; /* Espacio entre las imágenes */
-    justify-content: center; /* Centra las imágenes en la página */
-}
-
-.img-productos{
-
-    display: flex;
-    flex-wrap: wrap; /* Permite que las imágenes se ajusten en filas */
-    gap: 20px; /* Espacio entre las imágenes */
-    justify-content: center; /* Centra las imágenes en la página */
-}
-
-.img-productos img{
-
-
-    width: calc(25% - 20px); /* Hace que cada imagen ocupe el 25% del contenedor menos el espacio del gap */
-    height: auto;
-    object-fit: cover; /* Asegura que la imagen llene el espacio sin distorsionarse */
-    border-radius: 8px; /* Bordes redondeados opcionales */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional */
-}
-
-
-
-
-/* Media Query para pantallas pequeñas, como 320px */
-@media (max-width: 320px) {
-
-    header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    li {
-        margin: 10px 0;
-    }
-
-    h1 {
-        margin-left: 0;
-        text-align: center;
-    }
-
-    .banner {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .banner img {
-        width: 100%;
-        height: auto;
-        margin: 10px 0;
-    }
-
-    main {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .p-centrado {
-        max-width: 100%;
-        padding: 5%;
-        margin: 0;
-    }
-
-    .contactos-main {
-        padding: 10px;
-    }
-
-    .contactos-main img {
-        width: 100%;
-        height: auto;
-    }
-
-    .main-Trabaje {
-        padding: 10px;
-        min-height: auto;
-    }
-
-    .productos-section {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .productos-section img {
-        width: 100%;
-        height: auto;
-        margin-bottom: 10px;
-    }
-
-    .footer-global {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    .footer-especifico {
-        font-size: 14px;
-        padding: 10px;
-    }
-}
-
-
+/*# sourceMappingURL=style.css.map */
