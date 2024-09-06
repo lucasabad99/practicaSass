@@ -1,0 +1,17 @@
+div{
+@extend%flexrowcenter;
+justify-content: space-around;
+background-color: red;
+@include sizes(100px,300px, cyan, blue);
+}
+
+section{
+    background-color: lime;
+    width: 100px;
+    @include flexrowspacebetween;
+    @include sizes(250px, 40px, green, red);
+}
+
+footer{
+@extend section;
+} 

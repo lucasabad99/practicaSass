@@ -3,6 +3,124 @@
   padding: 0;
 }
 
+selector {
+  color: yellow;
+}
+
+div, header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+body {
+  background-color: cyan;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background-color: black;
+}
+
+h1 {
+  font-size: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 4rem;
+}
+
+h5 {
+  font-size: 5rem;
+}
+
+h6 {
+  font-size: 6rem;
+}
+
+.gridarea1 {
+  grid-area: 1;
+}
+
+.gridarea2 {
+  grid-area: 2;
+}
+
+.gridarea3 {
+  grid-area: 3;
+}
+
+.gridarea4 {
+  grid-area: 4;
+}
+
+.gridarea5 {
+  grid-area: 5;
+}
+
+.gridarea6 {
+  grid-area: 6;
+}
+
+.gridarea7 {
+  grid-area: 7;
+}
+
+.gridarea8 {
+  grid-area: 8;
+}
+
+.gridarea9 {
+  grid-area: 9;
+}
+
+.gridarea10 {
+  grid-area: 10;
+}
+
+.blue {
+  color: blue;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.green {
+  color: green;
+}
+
+.pink {
+  color: pink;
+}
+
+.hotpink {
+  color: hotpink;
+}
+
+.facebook {
+  color: blue;
+}
+
+.instagram {
+  color: red;
+}
+
+.twitter {
+  color: black;
+}
+
 div {
   width: 670px;
 }
@@ -14,6 +132,9 @@ h1 {
 header {
   background-color: #F2E2C4;
   color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 header nav {
   color: red;
@@ -32,6 +153,27 @@ header nav ul a {
 }
 header nav ul a:hover {
   color: black;
+}
+
+div {
+  justify-content: space-around;
+  background-color: red;
+  width: 100px;
+  height: 300px;
+  background-color: cyan;
+  border-color: blue;
+}
+
+section, footer {
+  background-color: lime;
+  width: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 250px;
+  height: 40px;
+  background-color: green;
+  border-color: red;
 }
 
 /*# sourceMappingURL=style.css.map */

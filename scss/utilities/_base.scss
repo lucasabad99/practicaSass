@@ -9,21 +9,129 @@ $fuentetitulos: "matemasie", sans-serif;
 $fuentetextos:"Martian Mono", monospace;
 $ancho:720px;
 
+//LISTAS 
+$colores:blue, yellow, green, pink, hotpink;
+
+selector{
+    color:nth($colores,2)
+}
+
+//EXTENDS
+%flexrowcenter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+//MIXING 
+@mixin flexrowspacebetween {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+//MIXING CON PARAMETROS
+@mixin sizes($ancho, $alto, $fondo, $borde-color){
+width: $ancho;
+height: $alto;
+background-color: $fondo;
+border-color: $borde-color;
+}
+
+//CONDICIONALES
+
+$vista:celu;
+@if ($vista == escritorio){
+    body{
+        background-color: red($color: red);
+    }
+} @else if ($vista == celu){
+    body{
+        background-color: cyan;
+    }
+}@else {
+    body{
+        background-color: hotpink;
+    }
+}
+
+// MAPS
+$links:(
+bg-header:black,
+decoration:none,
+bordes:2px solid red,
+relleno:20px,
+);
+
+a{
+    text-decoration: map-get($links, decoration);
+}
+
+header{
+    background-color: map-get($links, bg-header);
+}
+
+// BUCLES
+@for $i from 1 through 6{
+    h#{$i}{
+    font-size: $i*1rem;
+    }
+}
+
+@for $i from 1 through 10{
+    .gridarea#{$i}{
+        grid-area: $i;
+    }
+}
+
+//EACH
+
+@each $color in $colores{
+    .#{$color}{
+        color:#{$color};
+    }
+}
+
+// MAPS & EACHS 
+
+$mapRedes:(
+    facebook:blue,
+    instagram: red,
+    twitter:black,
+);
+
+@each $red, $color in $mapRedes {
+    .#{$red}{
+        color: $color
+    }
+}
+
+
+
+
+
+
+
+
+
+//
 div{
     width: calc($ancho)-50;
 }
+
 h1{
 font-family: $fuentetitulos;
 }
 header{
 background-color: $colorprimario;
 color: white;
+@include flexrowspacebetween;
  nav{
     color: red;
     background-color: white;
         ul{
         display: flex;
         flex-direction: row;
+        @extend%flexrowcenter;
             li{
                 margin: 0 20px;
                 }
